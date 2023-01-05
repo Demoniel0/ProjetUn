@@ -1,0 +1,31 @@
+body {
+    max-width: 1440px;
+    font-family: "Raleway";
+    padding: 0px;
+    margin: 0px;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 44px 77px 0px 55px;
+}
+.logo {
+    height: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    padding-top: 44px;
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
+}
+
+.menu {
+    margin-right: 67px;
+}

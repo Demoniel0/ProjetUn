@@ -1,9 +1,9 @@
 * {
     font-family: "Raleway";
+    max-width: 1400px;
 }
 
 body {
-    max-width: 1440px;
     padding: 0px;
     margin: 0px;
   }
@@ -12,20 +12,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 44px 77px 0px 55px;
+    margin: 30px 50px;
 }
 
 footer {
-    margin: 0px 53px 0px 48px;
-    padding: 45px 348px 58px 70px;
-    background-color: #D9D9D9;
+    margin: 0px 50px;
+    padding: 50px 70px 50px 70px;
+    background-color: #F2F2F2;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0px;
+    margin-right: 100px;
 }
 
 .logo {
@@ -38,17 +39,16 @@ a {
 }
 
 nav a:hover {
-    padding-top: 44px;
-    border-top: 2px solid #0065FC;
+    border-top: solid 2px #0065FC;
     color: #0065FC;
 }
 
 .menu {
-    margin-right: 67px;
+    padding: 30px;
 }
 
 .recherche {
-    margin: 63px 431px 0px 55px;
+    margin: 63px 50px 0px 50px;
 }
 
 li {
@@ -92,25 +92,38 @@ input::placeholder {
 }
 
 .barre {
-    margin: 30px 0px 30px 0px;
+    margin: 20px 0px 30px 0px;
+    
+}
+
+form {
+    display: flex;
 }
 
 .filtre {
     font-size: 17px;
     font-weight: 700;
-    margin: 30px 0px 30px 0px;
+    margin: 30px 0px;
     display: flex;
-    justify-content: space-between;
+}
+
+.filtre2 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .filtres {
     border: 2px solid #D9D9D9;
     border-radius: 30px;
-    width: auto;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px;
     display: flex;
-    flex-direction: row;
     align-items: center;
+}
+
+.filtres p {
+    margin: 0;
 }
 
 i {
@@ -123,8 +136,14 @@ i {
 
 .cercle {
     padding: 10px 8px ;
-    border: 2px solid #D9D9D9;
+    border: 1px solid #D9D9D9;
     border-radius: 20px;
+}
+
+.graphe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .filtres:hover {
@@ -141,11 +160,10 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 750px;
 }
 
 .carte {
-    margin: 50px;
+    margin: 20px 25px 50px 50px;
     padding: 40px;
     border-radius: 30px;
     width: 55%;
@@ -156,14 +174,13 @@ i {
 }
 
 .populaire {
-    margin: 50px 50px 50px 0px;
+    margin: 20px 50px 50px 25px;
     padding: 40px;
     border-radius: 30px;
     width: 35%;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .presentation {
@@ -174,27 +191,39 @@ i {
     align-content: space-between;
 }
 
+.presentation2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+}
+
 .card {
     margin-bottom: 20px;
     padding-bottom: 5px;
     border-radius: 30px;
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
 
+.card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card2 {
     border-radius: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
+}
+
+.card2 a {
+    display: flex;
+    flex-direction: row;
 }
 
 .hotel {
@@ -233,6 +262,7 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .photo {
@@ -264,4 +294,190 @@ i {
 
 .symbol {
     color: black;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .filtre {
+        width: 80%;
+    }
+
+    .catalogue {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card2 {
+        width: 32%;
+    }
+
+    .carte {
+        width: 82%;
+    }
+
+    .populaire {
+        margin-left: 50px;
+        width: 82%;
+    }
+
+    .presentation2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .photo {
+        height: 260px;
+    }
+
+    footer {
+        width: 76%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    * {
+        max-width: 767px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    header {
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+        margin: 20px 0 0 0;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu {
+        padding: 30px 60px;
+    }
+
+    nav a:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .recherche {
+        margin: 0px 20px;
+    }
+
+    .barre {
+        margin: 20px 0px 30px 0px;
+    }
+
+    .filtre {
+        flex-direction: column;
+    }
+    
+    .filtre2 {
+        width: 100%;
+        flex-wrap: wrap;
+        
+    }
+
+    .filtres {
+        width: 40%;
+        border: 2px solid #D9D9D9;
+        border-radius: 30px;
+        padding: 15px 15px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .graphe {
+        width: 90%;
+    }
+
+    .populaire {
+        margin: 0;
+        padding: 20px;
+        border-radius: 0;
+        width: 100%;
+        background-color: #F2F2F2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card2 {
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+    }
+
+    .carte {
+        margin: 0;
+        padding: 20px;
+        border-radius: 0px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-radius: 30px;
+        width: 90%;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+    }
+
+    .catalogue {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: none;
+    }
+
+    .activite {
+        width: 100%;
+        margin: 0px 20px;
+    }
+    
+    .paysage {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .loisir {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        margin: 0px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

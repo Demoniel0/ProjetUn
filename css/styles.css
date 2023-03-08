@@ -1,6 +1,12 @@
 * {
     font-family: "Raleway";
+    box-sizing: border-box;
+}
+
+.site {
     max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -12,15 +18,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 50px;
+    padding: 0 20px;
 }
 
 footer {
-    margin: 0px 50px;
     padding: 50px 70px 50px 70px;
     background-color: #F2F2F2;
     display: flex;
-    flex-direction: row;
+    margin: 20px 20px 0 20px;
 }
 
 ul {
@@ -44,11 +49,12 @@ nav a:hover {
 }
 
 .menu {
-    padding: 30px;
+    padding: 40px 30px;
+    display: inline-block;
 }
 
 .recherche {
-    margin: 63px 50px 0px 50px;
+    padding: 0 20px;
 }
 
 li {
@@ -91,6 +97,10 @@ input::placeholder {
     border-radius: 0px 15px 15px 0px;
 }
 
+.rechercher i.fa {
+    display: none;
+}
+
 .barre {
     margin: 20px 0px 30px 0px;
     
@@ -103,15 +113,14 @@ form {
 .filtre {
     font-size: 17px;
     font-weight: 700;
-    margin: 30px 0px;
     display: flex;
 }
 
 .filtre2 {
     width: 70%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
+    margin-left: 20px ;
 }
 
 .filtres {
@@ -120,6 +129,7 @@ form {
     padding: 0px 15px;
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 .filtres p {
@@ -160,13 +170,13 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .carte {
-    margin: 20px 25px 50px 50px;
     padding: 40px;
     border-radius: 30px;
-    width: 55%;
+    width: 68%;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -174,10 +184,9 @@ i {
 }
 
 .populaire {
-    margin: 20px 50px 50px 25px;
     padding: 40px;
     border-radius: 30px;
-    width: 35%;
+    width: 29%;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -243,7 +252,7 @@ i {
 }
 
 .activite {
-    margin: 0px 50px 50px 50px;
+    padding: 0 20px;
 }
 
 .paysage {
@@ -253,15 +262,13 @@ i {
 }
 
 .loisir {
-    width: 20%;
+    width: 22%;
     border-radius: 30px;
     background-color: white;
-    object-fit: cover;
     font-weight: bold;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
@@ -313,12 +320,12 @@ i {
     }
 
     .carte {
-        width: 82%;
+        width: 100%;
     }
 
     .populaire {
-        margin-left: 50px;
-        width: 82%;
+        border-radius: 0;
+        width: 100%;
     }
 
     .presentation2 {
@@ -329,6 +336,10 @@ i {
 
     .photo {
         height: 260px;
+    }
+
+    .loisir {
+        width: 24%;
     }
 
     footer {
@@ -342,22 +353,12 @@ i {
 
 @media screen and (max-width: 767px) {
 
-    * {
-        max-width: 767px;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
     header {
         display: flex;
         flex-direction: column ;
         align-items: center;
-        margin: 20px 0 0 0;
+        margin-top: 20px;
+        padding: 0;
     }
 
     nav {
@@ -368,7 +369,9 @@ i {
     }
 
     .menu {
-        padding: 30px 60px;
+        padding: 30px;
+        width: 50%;
+        text-align: center;
     }
 
     nav a:hover {
@@ -377,7 +380,20 @@ i {
     }
 
     .recherche {
-        margin: 0px 20px;
+        padding: 0px 10px;
+    }
+
+    .catalogue {
+        padding: 0;
+    }
+
+    .rechercher span {
+        display: none;
+    }
+
+    .rechercher i {
+        display: inline-block;
+        color: white;
     }
 
     .barre {
@@ -391,15 +407,16 @@ i {
     .filtre2 {
         width: 100%;
         flex-wrap: wrap;
+        margin-left: 0;
         
     }
 
     .filtres {
-        width: 40%;
         border: 2px solid #D9D9D9;
         border-radius: 30px;
         padding: 15px 15px;
         margin-top: 10px;
+        margin-right: 10px;
         display: flex;
         align-items: center;
     }
@@ -419,7 +436,7 @@ i {
     }
 
     .card2 {
-        width: 90%;
+        width: 100%;
         margin-bottom: 10px;
         border-radius: 30px;
         background-color: white;
@@ -442,7 +459,7 @@ i {
         margin-bottom: 10px;
         padding-bottom: 5px;
         border-radius: 30px;
-        width: 90%;
+        width: 100%;
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         object-fit: cover;
@@ -451,17 +468,17 @@ i {
     .catalogue {
         display: flex;
         flex-direction: column-reverse;
+        padding: 0;
     }
 
     .presentation {
         display: flex;
         flex-direction: column;
-        flex-wrap: none;
+        flex-wrap: nowrap;
     }
 
     .activite {
         width: 100%;
-        margin: 0px 20px;
     }
     
     .paysage {
@@ -471,7 +488,7 @@ i {
     }
 
     .loisir {
-        width: 90%;
+        width: 100%;
         margin-bottom: 20px;
     }
 

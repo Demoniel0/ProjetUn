@@ -61,9 +61,9 @@ li {
     margin-bottom: 6px;
 }
 
-.titre {
+h3 {
+    margin-top: 6px ;
     margin-bottom: 14px;
-    font-weight: bold;
 }
 
 input::placeholder {
